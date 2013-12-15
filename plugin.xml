@@ -23,11 +23,12 @@
                  </intent-filter>
              </activity>
          </config-file>
-
-         <config-file target="res/xml/config.xml" parent="plugins">
-             <plugin name="CalendarPlugin"
-                 value="com.tenforwardconsulting.phonegap.plugins.CalendarPlugin"/>
-         </config-file>
+                
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CalendarPlugin">
+                <param name="android-package" value="com.tenforwardconsulting.phonegap.plugins.CalendarPlugin"/>
+            </feature>  
+        </config-file>
 
          <source-file src="src/android/com/tenforwardconsulting/phonegap/plugins/CalendarPlugin.java" target-dir="src/android/com/tenforwardconsulting/phonegap/plugins"/>
      </platform>
