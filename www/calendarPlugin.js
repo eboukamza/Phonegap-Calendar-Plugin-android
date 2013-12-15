@@ -1,11 +1,10 @@
 
-
 function calendarPlugin()
 {
 }
 
 calendarPlugin.prototype.createEvent = function(
-		title,location,notes,startDate,endDate,calendarName,reminderMinutes,successCallback,errorCallback
+		title,location,notes,startDate,endDate,successCallback,errorCallback
 		) {
     if (typeof errorCallback != "function")  {
         console.log("calendarPlugin.createEvent failure: errorCallback parameter must be a function");
