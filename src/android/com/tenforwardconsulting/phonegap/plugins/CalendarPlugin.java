@@ -1,7 +1,7 @@
 package com.tenforwardconsulting.phonegap.plugins;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,6 +40,7 @@ public class CalendarPlugin extends CordovaPlugin {
 		return false;
 	}
 	
+	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if(requestCode == RESULT_CODE_CREATE) {
 			if(resultCode == Activity.RESULT_OK || resultCode == Activity.RESULT_CANCELED) {
